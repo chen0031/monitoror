@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Documentation — Monitoror, unified monitoring wallboard</title>
+  <meta content="Documentation of Monitoror, which is a wallboard monitoring app to monitor server status; monitor CI builds progress or even display critical values"
+        name="description">
+  <link href="../../../favicon.png" rel="icon" type="image/png">
+  <link href="../../../favicon.ico" rel="icon">
+  <link href="../../../assets/styles/main.css" rel="stylesheet" type="text/css">
+  <link rel="canonical" href="https://monitoror.com/documentation/">
+
+  <!-- OpenGraph / Twitter cards -->
+  <meta property="og:image" content="https://monitoror.com/assets/images/opengraph.png" />
+  <meta property="og:site_name" content="Monitoror" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Documentation — Monitoror, unified monitoring wallboard" />
+  <meta property="og:url" content="https://monitoror.com/documentation/" />
+  <meta property="og:description" content="Documentation of Monitoror, which is a wallboard monitoring app to monitor server status; monitor CI builds progress or even display critical values" />
+  <meta name="twitter:image:src" content="https://monitoror.com/assets/images/opengraph.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Documentation — Monitoror, unified monitoring wallboard" />
+  <meta name="twitter:description" content="Documentation of Monitoror, which is a wallboard monitoring app to monitor server status; monitor CI builds progress or even display critical values" />
+</head>
+<body class="m-documentation">
+<svg xmlns="http://www.w3.org/2000/svg" style="overflow: hidden;visibility: hidden;height: 0;width: 0;">
+  <symbol id="link-icon" viewBox="0 0 72 72" fill="currentColor">
+    <path d="M30.9 49.1l-6.7 6.7c-.8.8-1.6.9-2.1.9s-1.4-.1-2.1-.9l-5.2-5.2c-1.1-1.1-1.1-3.1 0-4.2l6.1-6.1.2-.2 6.5-6.5c-1.2-.6-2.5-.9-3.8-.9-2.3 0-4.6.9-6.3 2.6L10.8 42c-3.5 3.5-3.5 9.2 0 12.7l5.2 5.2c1.7 1.7 4 2.6 6.3 2.6s4.6-.9 6.3-2.6l6.7-6.7C38 50.5 38.6 46.3 37 43l-6.1 6.1zM38.5 22.7l6.7-6.7c.8-.8 1.6-.9 2.1-.9s1.4.1 2.1.9l5.2 5.2c1.1 1.1 1.1 3.1 0 4.2l-6.1 6.1-.2.2-6.5 6.5c1.2.6 2.5.9 3.8.9 2.3 0 4.6-.9 6.3-2.6l6.7-6.7c3.5-3.5 3.5-9.2 0-12.7l-5.2-5.2c-1.7-1.7-4-2.6-6.3-2.6s-4.6.9-6.3 2.6l-6.7 6.7c-2.7 2.7-3.3 6.9-1.7 10.2l6.1-6.1z"></path>
+    <path d="M44.1 30.7c.2-.2.4-.6.4-.9 0-.3-.1-.6-.4-.9l-2.3-2.3c-.2-.2-.6-.4-.9-.4-.3 0-.6.1-.9.4L25.8 40.8c-.2.2-.4.6-.4.9 0 .3.1.6.4.9l2.3 2.3c.2.2.6.4.9.4.3 0 .6-.1.9-.4l14.2-14.2z"></path>
+  </symbol>
+</svg>
+
+<div class="m-documentation--header-mobile">
+  <button id="js-toggle-menu" class="m-documentation--header-menu-icon">Menu</button>
+  <a href="../../..">
+    <img alt="Monitoror" class="m-documentation--header-mobile-logo" src="../../../assets/images/logo.svg">
+  </a>
+</div>
+
+<div class="m-sidebar">
+  <header class="m-documentation--header">
+    <a href="../../..">
+      <img alt="Monitoror" class="m-documentation--logo" src="../../../assets/images/logo.svg">
+    </a>
+    <h1 class="m-documentation--header-title">
+      Documentation
+    </h1>
+  </header>
+
+  <aside class="m-documentation--menu">
+    <ul>
+      <li>
+        <a href="#get-started">Get started</a>
+        <ul>
+          <li><a href="#how-it-works">How it works?</a></li>
+          <li><a href="#installation">Installation</a></li>
+        </ul>
+      </li>
+      <li>
+        <span>Other resources</span>
+        <ul>
+          <li><a href="/documentation/#tile-definitions">Tile definitions</a></li>
+          <li><a href="/documentation/#advanced-options">Advanced options</a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+</div>
+
+<main class="m-documentation--content">
+  <section class="m-documentation--section" id="get-started">
+    <h2 class="m-documentation--section-title">Get started</h2>
+
+    <div class="m-documentation--block">
+      <h3 id="how-it-works">How it works?</h3>
+
+      <p>
+        Monitoror is a single file app written in Go which can be run on these platforms:
+      </p>
+
+      <ul>
+        <li>Linux <span class="m-documentation--installation-arch">x64</span> <span class="m-documentation--installation-arch">ARM</span></li>
+        <li>macOS</li>
+        <li>Windows <span class="m-documentation--installation-arch">x64</span></li>
+      </ul>
+
+      <p>
+        The app is divided into two parts: Core and UI.
+      </p>
+
+      <p>
+        Core is the server-side Monitoror HTTP API,
+        configured by the <strong>environment variables</strong> or <code>.env</code> file.
+      </p>
+
+      <p>
+        UI is the client-side Monitoror loaded in browser, which is the wallboard itself.
+      </p>
+
+      <!-- TODO: schema -->
+    </div>
+
+    <div class="m-documentation--block">
+      <h3 id="installation">Installation</h3>
+
+      <div class="m-documentation--installation">
+        <p>
+          Download and run the latest release.
+        </p>
+
+        <table>
+          <tbody>
+          <tr>
+            <td>
+              Linux <span class="m-documentation--installation-arch">x64</span>
+            </td>
+            <td>
+              <a class="m-documentation--installation-link" data-download-platform="linux-amd64">
+                <svg fill="currentColor" viewBox="0 0 72 72">
+                  <path d="M64 27v28H8V27H0v36h72V27h-8z"></path>
+                  <path d="M32.1 6.7h8v33.6h-8z"></path>
+                  <path d="M48 35.9L36 49.6 24 36h24z"></path>
+                </svg>
+                Download <span class="desktop-only">Monitoror</span> for Linux x64
+              </a>
+              <br>
+              <input data-select-on-click readonly type="text"
+                     value="curl -sL -o monitoror $(curl -s https://api.github.com/repos/monitoror/monitoror/releases/latest | grep 'browser_download_url.*monitoror-linux-amd64' | cut -d: -f2,3 | tr -d \&quot;)"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Linux <span class="m-documentation--installation-arch">ARM</span>
+            </td>
+            <td>
+              <a class="m-documentation--installation-link" data-download-platform="linux-arm">
+                <svg fill="currentColor" viewBox="0 0 72 72">
+                  <path d="M64 27v28H8V27H0v36h72V27h-8z"></path>
+                  <path d="M32.1 6.7h8v33.6h-8z"></path>
+                  <path d="M48 35.9L36 49.6 24 36h24z"></path>
+                </svg>
+                Download <span class="desktop-only">Monitoror</span> for Linux ARM
+              </a>
+              <br>
+              <input data-select-on-click readonly type="text"
+                     value="curl -sL -o monitoror $(curl -s https://api.github.com/repos/monitoror/monitoror/releases/latest | grep 'browser_download_url.*monitoror-linux-arm' | cut -d: -f2,3 | tr -d \&quot;)"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              macOS
+            </td>
+            <td>
+              <a class="m-documentation--installation-link" data-download-platform="macos">
+                <svg fill="currentColor" viewBox="0 0 72 72">
+                  <path d="M64 27v28H8V27H0v36h72V27h-8z"></path>
+                  <path d="M32.1 6.7h8v33.6h-8z"></path>
+                  <path d="M48 35.9L36 49.6 24 36h24z"></path>
+                </svg>
+                Download <span class="desktop-only">Monitoror</span> for macOS
+              </a>
+              <br>
+              <input data-select-on-click readonly type="text"
+                     value="curl -sL -o monitoror $(curl -s https://api.github.com/repos/monitoror/monitoror/releases/latest | grep 'browser_download_url.*monitoror-macos' | cut -d: -f2,3 | tr -d \&quot;)"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Windows <span class="m-documentation--installation-arch">x64</span>
+            </td>
+            <td>
+              <a class="m-documentation--installation-link" data-download-platform="windows-amd64">
+                <svg fill="currentColor" viewBox="0 0 72 72">
+                  <path d="M64 27v28H8V27H0v36h72V27h-8z"></path>
+                  <path d="M32.1 6.7h8v33.6h-8z"></path>
+                  <path d="M48 35.9L36 49.6 24 36h24z"></path>
+                </svg>
+                Download <span class="desktop-only">Monitoror</span> for Windows
+              </a>
+              <br>
+              <input data-select-on-click readonly type="text"
+                     value="Invoke-WebRequest -OutFile monitoror.exe $(Invoke-WebRequest https://api.github.com/repos/monitoror/monitoror/releases/latest | Select-Object -Expand Content | ConvertFrom-Json | Select-Object -Expand assets | Where-Object {$_.name -Match 'windows'} | Select-Object -Expand browser_download_url)"/>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Run the Core</h4>
+
+      <p>
+        On Linux or macOS, open you terminal, make monitoror executable, and run it:
+      </p>
+
+      <pre><code class="language-shell">
+chmod +x monitoror
+./monitoror
+      </code></pre>
+
+      <p>
+        On Windows, you can double click on the executable, or run it from PowerShell:
+      </p>
+
+      <pre><code class="language-shell">
+.\monitoror.exe
+      </code></pre>
+
+      <h4>Access the UI</h4>
+
+      <p>
+        Once the Core is launched, loading animation must be visible here out of the box:
+        <a href="http://localhost:8080">http://localhost:8080</a>
+      </p>
+      <p class="note">
+        <span class="tag">Note</span>
+        Change <code>localhost</code> to the Monitoror host IP if needed
+      </p>
+    </div>
+  </section>
+</main>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+<script src="../../../js/main.js"></script>
+</body>
+</html>
