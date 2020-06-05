@@ -260,6 +260,7 @@ input {
 .m-documentation a:not(.m-documentation--title-link):not(.m-documentation-card) {
   position: relative;
   text-decoration: none;
+  padding-bottom: 4px;
 }
 
 .c-underlined::after,

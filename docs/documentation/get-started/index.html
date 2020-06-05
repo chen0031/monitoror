@@ -47,7 +47,7 @@
         <a href="#get-started">Get started</a>
         <ul>
           <li><a href="#how-it-works">How it works?</a></li>
-          <li><a href="#installation">Installation</a></li>
+          <li><a href="#installation">Download and install</a></li>
         </ul>
       </li>
       <li>
@@ -76,6 +76,7 @@
         <li>Linux <span class="m-documentation--installation-arch">x64</span> <span class="m-documentation--installation-arch">ARM</span></li>
         <li>macOS</li>
         <li>Windows <span class="m-documentation--installation-arch">x64</span></li>
+        <li>Docker</li>
       </ul>
 
       <p>
@@ -94,12 +95,12 @@
       <!-- TODO: schema -->
     </div>
 
-    <div class="m-documentation--block">
-      <h3 id="installation">Installation</h3>
+    <div class="m-documentation--block" id="download">
+      <h3 id="installation">Download and Install</h3>
 
       <div class="m-documentation--installation">
         <p>
-          Download and run the latest release.
+          Download the latest release.
         </p>
 
         <table>
@@ -166,6 +167,22 @@
               <br>
               <input data-select-on-click readonly type="text"
                      value="curl -sL -o monitoror $(curl -s https://api.github.com/repos/monitoror/monitoror/releases/latest | grep 'browser_download_url.*monitoror-macos' | cut -d: -f2,3 | tr -d \&quot;)"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Docker
+            </td>
+            <td>
+              <a class="m-documentation--installation-link" href="https://hub.docker.com/r/monitoror/monitoror" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="../../assets/images/icons.svg#docker"/>
+                </svg>
+                See on Docker Hub
+              </a>
+              <br>
+              <input data-select-on-click readonly type="text"
+                     value="docker run -p 8080:8080 monitoror/monitoror"/>
             </td>
           </tr>
           </tbody>
